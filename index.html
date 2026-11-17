@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PackshotForge — AI Product Photos in Photoshop (works with Nano Banana)</title>
-  <meta name="description" content="Turn one raw product photo into marketplace-ready packshots inside Photoshop. 21 scene presets, Amazon/Etsy/Shopify export sizes, batch folders. Free Photoshop script — bring your own Gemini API key. No subscription, no credits.">
+  <title>PackshotForge — AI product photo backgrounds for GIMP 3</title>
+  <meta name="description" content="A free GIMP 3 plug-in that rebuilds the background of a product photo with Google's Gemini image model, then puts your original product pixels back on top so the label is never redrawn. No dependencies, bring your own API key.">
   <style>
     :root { color-scheme: light dark; }
     * { box-sizing: border-box; margin: 0; }
@@ -18,51 +18,41 @@
     .cta:hover { background: #166b2f; }
     ul { padding-left: 22px; margin-bottom: 12px; }
     li { margin-bottom: 6px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin: 16px 0; }
-    .card { border: 1px solid rgba(128,128,128,.35); border-radius: 8px; padding: 12px; font-size: .9rem; }
     .muted { opacity: .75; font-size: .9rem; }
     footer { margin-top: 56px; font-size: .8rem; opacity: .6; }
   </style>
 </head>
 <body>
 <main>
-  <p class="tag">Photoshop script · free · bring your own key</p>
-  <h1>Marketplace-ready product photos, generated inside Photoshop</h1>
-  <p>PackshotForge turns one raw product photo into clean packshots and lifestyle scenes — without leaving Photoshop, and without another monthly subscription. Powered by Google's Gemini image models (the "Nano Banana" family) with <b>your own free API key</b>.</p>
+  <p class="tag">GIMP 3 plug-in · free · bring your own key</p>
+  <h1>Product photo backgrounds, generated inside GIMP</h1>
+  <p>PackshotForge rebuilds the background around your product with Google's Gemini image model, then composites your <b>original product pixels</b> back on top, so the model cannot redraw your label.</p>
 
   <a class="cta" href="https://github.com/nsjokt/packshotforge">Download on GitHub — free, no signup</a>
-  <p class="muted">One file, MIT licensed. Prefer a zip with the install guide? <a href="https://joktnova.gumroad.com/l/packshotforge">Get it on Gumroad</a> (email required there).</p>
-  <p class="muted">No subscription. No credit packs. Your images go directly from your machine to Google's API — nowhere else.</p>
+  <p class="muted">No pip, no dependencies: copy one folder into GIMP's plug-ins directory. MIT licensed. Your images go directly from your machine to Google's API — nowhere else.</p>
 
   <h2>What it does</h2>
   <ul>
-    <li><b>21 scene presets</b> tuned for e-commerce: pure white marketplace background, cosmetics (marble, silk, water splash…), jewelry (velvet, macro sparkle…), apparel (ghost mannequin, flat lay…), food (rustic, dark moody…).</li>
-    <li><b>Marketplace export sizes</b> built in: Amazon 2000×2000 on pure white, Etsy 3000×2400, Shopify 2048×2048.</li>
-    <li><b>Batch mode</b>: point it at a folder of raw photos, get a folder of finished listing images.</li>
-    <li><b>Product stays intact</b>: every prompt is engineered to preserve shape, colors, label text and logos — only the scene changes.</li>
+    <li><b>Scene presets</b> for e-commerce product photos, including a pure white marketplace background.</li>
+    <li><b>Pixel-Lock</b>: your selection of the product is composited back over the generated scene, so label text and logos stay exactly as photographed.</li>
+    <li><b>Marketplace export sizes</b> built in: Amazon 2000×2000 on white, Etsy 3000×2400, Shopify 2048×2048.</li>
   </ul>
 
-  <h2>Why a script instead of a subscription?</h2>
-  <p>Web tools charge $15–40 every month and meter your generations with credits. PackshotForge is a script you own: the script is free, and generation costs go straight to Google at API rates. Image generation has no free tier — it is billed per image, about $0.07 at full quality and roughly half that in batch mode, so a ten-image listing shoot costs well under a dollar.</p>
-
-  <div class="grid">
-    <div class="card"><b>Free</b><br>PackshotForge</div>
-    <div class="card"><b>$15–40 / month</b><br>typical AI photo SaaS</div>
-    <div class="card"><b>Your key, your data</b><br>no middleman servers</div>
-  </div>
+  <h2>What it costs</h2>
+  <p>The plug-in is free. Image generation is billed by Google per image on your own key — there is no free tier for image generation. You see the estimated cost and confirm before every call.</p>
 
   <h2>Requirements</h2>
   <ul>
-    <li>Adobe Photoshop (CC 2015 or newer recommended; Windows 10+/macOS)</li>
-    <li>A free Google Gemini API key from <a href="https://aistudio.google.com">aistudio.google.com</a> (2-minute setup, guide included)</li>
+    <li>GIMP 3.0 or newer (macOS, Linux, Windows)</li>
+    <li>A Google Gemini API key from <a href="https://aistudio.google.com">aistudio.google.com</a></li>
   </ul>
 
   <h2>FAQ</h2>
-  <p><b>Is this affiliated with Google or "Nano Banana"?</b> No. PackshotForge is an independent tool that calls Google's public Gemini API with your key. "Nano Banana" and "Gemini" are Google's model names, referenced here descriptively.</p>
-  <p><b>Do my photos pass through your servers?</b> Never. The script talks directly to Google's API from your machine.</p>
-  <p><b>Refunds?</b> 14 days, no questions asked, via Gumroad.</p>
+  <p><b>Is there a Photoshop version?</b> Not any more. The Photoshop script was withdrawn on 17 November 2026.</p>
+  <p><b>Is this affiliated with Google or the GIMP project?</b> No. PackshotForge is an independent tool that calls Google's public Gemini API with your key.</p>
+  <p><b>Do my photos pass through your servers?</b> Never. The plug-in talks directly to Google's API from your machine.</p>
 
-  <footer>© 2026 PackshotForge · <a href="mailto:nsjokt@gmail.com">support</a></footer>
+  <footer>© 2026 PackshotForge · <a href="https://github.com/nsjokt/packshotforge/issues">report a problem</a></footer>
 </main>
 </body>
 </html>
